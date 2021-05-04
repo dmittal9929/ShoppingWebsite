@@ -1,0 +1,80 @@
+.pos{
+    margin:100px;
+    
+}
+
+#carouselExampleCaptions .carousel-item {
+    height: 20%;
+  }
+  
+  .carousel-caption {
+    font-size: 18px;
+  }
+  
+  .carousel-item>img {
+    width: 100%
+  }
+
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catergoryContainer{
+    padding-left: 20px;
+    position: relative;
+}
+
+.carousel slide{
+    height: 40%;
+}
+.custom{
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    height: 500px;
+    width:400px;
+    margin-top:5%;
+    box-shadow: 0 18px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px 50px;
+   
+}
+.custom:hover{
+    opacity:90%;
+    transform: scale(1.05);
+   
+}
+
+
+
+.custom img{
+    top: 40px;
+    position: relative;
+    object-fit: fill;
+    width:90%;
+    height: 400px;
+    border-radius: 15px 50px
+}
+
+
+
+
+
+
+
+.custom-carousal{
+    margin-top: 10%;
+}
+
+
+.clr{
+    background-color: rgb(235, 232, 231);
+}
+
+
+.marg{
+    margin-left:8%;
+}
+

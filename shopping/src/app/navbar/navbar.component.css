@@ -1,0 +1,27 @@
+#icon{
+    opacity:90%
+
+}
+
+
+.customnav{
+    width: 100%;
+}
+
+#icon:hover{
+    opacity:100%;
+    transform: scale(1.5);
+
+}
+
+.search{
+    margin-top: 20px;
+}
+
+button:hover{
+    transform: scale(1.1);
+   
+
+}
+
+    

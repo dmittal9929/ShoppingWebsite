@@ -1,0 +1,30 @@
+/*.mainContainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    float: left;
+}
+.ProdcutInside{
+    
+    position: relative;
+    display: inline-block;
+}
+*/
+
+.mainContainer{
+    height: auto;
+    width: 95%;
+    position: relative;
+    margin-left: 10%;
+}
+.ProdcutInside{
+    
+    position: relative;
+    display: inline-block;
+    height: 250px;
+    width:300px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    
+}
+

@@ -1,0 +1,131 @@
+<div class="wrap">
+
+  <div class="header">
+    <span>Add Product</span>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <form #addform="ngForm" (ngSubmit)="onSubmitadd(addform.value)">
+
+
+
+          <div class="form-group custom">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" ngModel required />
+          </div>
+
+          <div class="form-group custom ">
+            <label>Description</label>
+            <input type="textarea" class="form-control" name="description" ngModel required />
+          </div>
+
+          <div class="form-group custom ">
+            <label>Price</label>
+            <input type="number" class="form-control" name="price" ngModel required />
+          </div>
+
+          <div class="form-group custom">
+            <label>Image</label>
+            <input type="text" class="form-control" name="image" [(ngModel)]=image required />
+          </div>
+
+          <div class="form-group custom ">
+            <label>Gender</label>
+            <input type="text" class="form-control" name="gender" ngModel required />
+          </div>
+
+          <div class="form-group custom ">
+            <label>Category</label>
+            <input type="text" class="form-control" name="mainCategory" ngModel required />
+          </div>
+
+          <div>
+            <input type="submit" class="add" [disabled]="addform.invalid" value="Add"  />
+          </div>
+
+
+
+
+
+        </form>
+      </div>
+
+      <div class="previewImage" style="background: url({{image}}) no-repeat center center;background-size:80% 80%;">
+        <img src={{image}}>
+      
+    </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!--<div class="card">
+
+ <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="name" ngModel required /><br>
+
+        <label>Description</label>
+        <input type="text" name="desc" placeholder="name" ngModel required /><br>
+
+        <label>Price</label>
+        <input type="number" name="price" placeholder="name" ngModel required /><br>
+
+        <label>Image</label>
+        <input type="text" name="image" placeholder="name" ngModel required /><br>
+
+        <label>Name</label>
+        <input type="text" name="gender" placeholder="name" ngModel required /><br>
+
+        <label>Name</label>
+        <input type="text" name="category" placeholder="name" ngModel required /><br>
+    
+    </div>
+
+    <div class="card-body">
+      <h4 class="card-title">ADD PRODUCT (Template Driven Form)</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <form novalidate>
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control" name="title" ngModel>
+            </div>
+            <div class="form-group ">
+              <label>Model Name</label>
+              <input type="text" class="form-control" name="modelName" ngModel>
+            </div>
+            <div class="form-group ">
+              <label>Color</label>
+              <input type="text" class="form-control" name="color" ngModel>
+            </div>
+            <div class="form-group ">
+              <label>Product Type</label>
+              <select class="form-control" name="productType" ngModel>
+                <option *ngFor="let p of productTypes" [value]="p">{{p}}</option>
+              </select>
+            </div>
+            <div class="form-group ">
+              <label>Brand</label>
+              <input type="text" class="form-control" name="brand" ngModel>
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input type="text" class="form-control" name="price" ngModel>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-default">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>-->

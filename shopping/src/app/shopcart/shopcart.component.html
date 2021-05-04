@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<br>
+<br>
+<div *ngIf="count==0" class="EmptyCart">
+    <img class="EmptyCartImg" src="https://www.seekpng.com/png/detail/117-1170538_404-your-cart-is-empty.png"/>
+</div>
+<div class="col-sm-12 col-md-10 col-md-offset-1" *ngIf="count>0">
+    <table class="table table-hover">
+    <thead>
+    <tr>
+    <th class=headprod>Product</th>
+    
+    <th>Quantity</th>
+    <th class="text-center">Price</th>
+    <th class="text-center">Total</th>
+    <th> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of disp">
+    <td class="col-sm-8 col-md-6">
+    <div class="media">
+    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{p.image}}" style="width: 72px; height: 72px;"> </a>
+    <div class="media-body">
+    <h4 class="media-heading"><a href="#">{{p.name}}</a></h4>
+    </div>
+    </div></td>
+    
+    <td class="col-sm-1 col-md-1" style="text-align: center">
+    <input type="number" class="form-control" id="quantity" ng-model="quant" [(ngModel)]= "p.quantity" (change)="OnChange(p.pid,p.quantity)">
+    </td>
+    <td class="col-sm-1 col-md-1 text-center" ng-model="price"><strong>₹{{p.price}}</strong></td>
+    <td class="col-sm-1 col-md-1 text-center" ><strong>₹{{p.total}}</strong></td>
+    <td class="col-sm-1 col-md-1">
+    <button type="button" class="btn btn-danger" (click)="RemoveFromCart(p.pid)">
+    <span class="fa fa-remove"></span> Remove
+    </button></td>
+    </tr>
+    <tr>
+    <td>   </td>
+    <td>   </td>
+    <td>   </td>
+    <td><h3>Total</h3></td>
+    <td class="text-right"><h3><strong>{{grandTotal}}</strong></h3></td>
+    </tr>
+    <tr>
+    <td>   </td>
+    <td>   </td>
+    <td>   </td>
+    <td>
+    <button type="button" class="btn btn-default" (click)="shopping()">
+    <span class="fa fa-shopping-cart"></span> Continue Shopping
+    </button></td>
+    <td>
+    <button type="button" class="btn btn-success" (click)="Order()">
+    Checkout <span class="fa fa-play"></span>
+    </button></td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div *ngIf="!prods">
+    Cart Is Empty
+</div>
+
+    <app-footer></app-footer>

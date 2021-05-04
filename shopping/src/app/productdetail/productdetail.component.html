@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<div class="container" >
+    <div class="images">
+      
+      <img src= {{image}}/>
+    </div>
+    <div class="slideshow-buttons">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+    </div>
+    <p class="pick">choose size</p>
+    <div class="sizes">
+
+      <div class="size">XS</div> 
+      <div class="size">S</div>
+      <div class="size">M</div>
+      <div class="size">L</div>
+      <div class="size">XL</div>
+      
+    </div>
+    <div class="product">
+      
+      <p>{{prod.gender}}'s {{prod.mainCategory}}</p>
+      <h1>{{prod.name}}</h1>
+      <h2>₹{{prod.price}}</h2>
+      <p class="desc">{{prod.description}}</p>
+      <br>
+      <label>Quantity:</label>
+      <form #quant="ngForm">
+        
+        <button class="minus" (click)="decrease()">-</button>
+        <input name="quantity" matInput type="text" required value="quantity" id='quantity' placeholder=1 min="1" max="5"onkeydown="return false" [(ngModel)]='qty'>
+        <button class="plus" (click)="increase()">+</button>
+        
+    </form>
+    <div class="buttons">
+      <button *ngIf="visibilty" class="mainButton" (click)="AddToCart()" id="addCart">Add To Cart</button>
+      <button *ngIf="!visibilty" class="mainButton" (click)="RemoveFromCart()" id="removeCart">Remove From Cart</button>
+
+      
+    </div>
+    </div>
+    
+  </div>
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <app-footer></app-footer>
+
+
+   

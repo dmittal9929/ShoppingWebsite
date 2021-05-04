@@ -1,0 +1,25 @@
+<div class="wrap">
+    <div class="header">
+        <span>Admin Login</span>    
+    </div>
+
+<div class="form-container sign-in-container custom">
+
+
+    <form #SignIn="ngForm">
+
+        <div>
+            <input type="email" placeholder="Email" name="name" required #name="ngModel" [(ngModel)]=login.email /><br><br>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class=error>Please enter data</div>
+
+            <input type="password" placeholder="Password" name="password" required [(ngModel)]=login.password /><br><br>
+            
+        </div>
+
+        <div class="login">
+            <button [disabled]="SignIn.invalid" (click)="OnLogin()">Sign In</button>
+        </div>
+
+    </form>
+</div>
+</div>
